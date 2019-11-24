@@ -53,17 +53,7 @@ def road_lines(image):
 
 lanes = Lanes()
 
-image_path = ("/Users/himanshumishra/Downloads/MLND-Capstone-master/00000.jpg")
 
- 
-image = cv2.imread('/Users/himanshumishra/Downloads/MLND-Capstone-master/00000.jpg',0)
-
- 
-cv2.imshow("image", image)
-cv2.waitKey()
-
-
-result = image.fl_image(road_lines)
 
 
 # Where to save the output video
