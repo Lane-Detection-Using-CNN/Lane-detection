@@ -14,12 +14,13 @@ class Lanes():
         self.recent_fit = []
         self.avg_fit = []
 
-def road_lines(image):
-    """ Takes in a road image, re-sizes for the model,
+""" This function takes in a image, 
+    re-sizes for the model,
     predicts the lane to be drawn from the model in G color,
     recreates an RGB image of a lane and merges with the
     original road image.
     """
+def road_lines(image):
 
     # Get image ready for feeding into model
     small_img = imresize(image, (80, 160, 3))
@@ -53,13 +54,10 @@ def road_lines(image):
 
 lanes = Lanes()
 
-
-
-
-# Where to save the output video
+# output video location
 vid_output = '/Users/himanshumishra/Downloads/MLND-Capstone-master/proj_reg_vid3.mp4'
 
-# Location of the input video
+# input video loaction
 clip1 = VideoFileClip("/Users/himanshumishra/Downloads/MLND-Capstone-master/harder_challenge_video.mp4")
 
 vid_clip = clip1.fl_image(road_lines)
